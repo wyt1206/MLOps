@@ -24,3 +24,9 @@ steps:
   inputs:
     testResultsFiles: '$(Build.BinariesDirectory)/*_report.xml'
     testRunTitle: 'Publish test results'
+
+- task: ExtractFiles@1
+  displayName: 'Extract files '
+  inputs:
+    destinationFolder: $(agent.builddirectory)
+
